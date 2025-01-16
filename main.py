@@ -34,9 +34,9 @@ from pyrogram import Client, filters
 from pyrogram.types import Message
 
 # Ensure environment variables are set
-api_id = os.environ.get("API_ID")
-api_hash = os.environ.get("API_HASH")
-bot_token = os.environ.get("BOT_TOKEN")
+api_id = os.environ.get("27536109")
+api_hash = os.environ.get("b84d7d4dfa33904d36b85e1ead16bd63")
+bot_token = os.environ.get("8161679463:AAHPJiQFPkBf-dZEJJOPO3EdiEyEUUYJ3t0")
 
 if not api_id or not api_hash or not bot_token:
     raise ValueError("API_ID, API_HASH, and BOT_TOKEN environment variables must be set.")
