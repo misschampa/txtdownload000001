@@ -38,8 +38,6 @@ api_id = os.environ.get("27536109")
 api_hash = os.environ.get("b84d7d4dfa33904d36b85e1ead16bd63")
 bot_token = os.environ.get("8161679463:AAHPJiQFPkBf-dZEJJOPO3EdiEyEUUYJ3t0")
 
-api_id = int(api_id)
-
 bot = Client(
     "bot",
     bot_token=bot_token,
