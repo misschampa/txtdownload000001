@@ -13,6 +13,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the rest of the working directory contents into the container at /usr/src/app
 COPY . .
 
+# Run the application on port 8080
+CMD ["python", "app.py"]
+
 # Make port 8080 available to the world outside this container
 EXPOSE 8080
 
