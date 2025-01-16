@@ -28,19 +28,18 @@ import re
 import os
 # import pycurl
 
-
-# bot = Client(
-#     "bot",
-#     api_id=api_id,
-#     api_hash=api_hash,
-#     bot_token=bot_token)
-
+# Initialize the bot
 bot = Client(
     "bot",
-    bot_token=os.environ.get("BOT_TOKEN"),
-    api_id=int(os.environ.get("API_ID")),
-    api_hash=os.environ.get("API_HASH")
+    api_id=API_ID,
+    api_hash=API_HASH,
+    bot_token=BOT_TOKEN
 )
+
+API_ID    = os.environ.get("API_ID", "24495656")
+API_HASH  = os.environ.get("API_HASH", "61afcf68c6429714dd18acd07f246571")
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "7842202956:AAHgKbWG5FSQhRdcovXmqaEYlPMd-dQu630") 
+
 
 @bot.on_message(filters.command(["start"])& ~filters.edited)
 async def account_login(bot: Client, m: Message):
