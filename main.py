@@ -12,7 +12,7 @@ import pyrogram
 from pyrogram import Client, filters
 import tgcrypto
 from p_bar import progress_bar
-# from details import api_id, api_hash, bot_token
+from details import api_id, api_hash, bot_token
 from subprocess import getstatusoutput
 import helper
 import logging
@@ -21,12 +21,12 @@ import aiohttp
 import asyncio
 import aiofiles
 from pyrogram.types import User, Message
-# import progressor 
-# from progressor import progress_for_pyrogram
+import progressor 
+from progressor import progress_for_pyrogram
 import sys
 import re
 import os
-# import pycurl
+import pycurl
 
 
 # bot = Client(
@@ -761,4 +761,5 @@ async def account_login(bot: Client, m: Message):
         await m.reply_text(e)
     await m.reply_text("Done")     
     
-bot.run()
+if __name__ == "__main__":
+    bot.run()
