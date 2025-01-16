@@ -13,8 +13,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the rest of the working directory contents into the container at /usr/src/app
 COPY . .
 
-# Make port 80 available to the world outside this container
-EXPOSE 80
+# Make port 8080 available to the world outside this container
+EXPOSE 8080
 
 # Define environment variables
 ENV API_ID=27536109
