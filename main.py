@@ -42,10 +42,10 @@ bot = Client(
     api_hash=os.environ.get("API_HASH")
 )
 
-@bot.on_message(filters.command(["start"])& ~filters.edited)
+@bot.on_message(filters.command(["start"]))
 async def account_login(bot: Client, m: Message):
     editable = await m.reply_text("Hello im txt file downloader\nPress /pyro to download links listed in a txt file in the format **Name:link**\n\nBot made by BATMAN")
-
+    
 @bot.on_message(filters.command(["cancel"]))
 async def cancel(_, m):
     editable = await m.reply_text("Canceling All process Plz wait")
