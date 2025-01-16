@@ -28,11 +28,28 @@ import re
 import os
 # import pycurl
 
+import os
+import sys
+from pyrogram import Client, filters
+from pyrogram.types import Message
+
+# Ensure environment variables are set
+api_id = os.environ.get("API_ID")
+api_hash = os.environ.get("API_HASH")
+bot_token = os.environ.get("BOT_TOKEN")
+
+if not api_id or not api_hash or not bot_token:
+    raise ValueError("API_ID, API_HASH, and BOT_TOKEN environment variables must be set.")
+
+api_id = int(api_id)
+
 bot = Client(
     "bot",
-    api_id=API_ID,
-    api_hash=API_HASH,
-    bot_token=BOT_TOKEN)
+    bot_token=bot_token,
+    api_id=api_id,
+    api_hash=api_hash
+)
+
 
 
 @bot.on_message(filters.command(["start"])& ~filters.edited)
